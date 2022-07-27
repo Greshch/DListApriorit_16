@@ -3,5 +3,7 @@
 
 int main()
 {
+	util::List list;
+	list.ShowList();
 	return 0;
 }
