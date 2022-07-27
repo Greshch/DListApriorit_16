@@ -22,5 +22,6 @@ namespace util
 		size_t Size();
 		void PushBack(int data);
 		int PopBack();
+		void Clear();
 	};
 }

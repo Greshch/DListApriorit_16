@@ -68,3 +68,27 @@ int util::List::PopBack()
 
 	return res;
 }
+
+void util::List::Clear()
+{
+	Node* cur = m_head;
+	Node* prev = nullptr;
+	for (size_t i = 0; i < m_size; i++, cur = cur->next)
+	{
+		if (prev != nullptr)
+		{
+			//std::cout << prev->val << "# ";
+			delete prev;
+			prev = nullptr;
+		}
+		prev = cur;
+	}
+	if (prev != nullptr)
+	{
+		//std::cout << prev->val << "# ";
+		delete prev;
+		prev = nullptr;
+	}
+	m_size = 0;
+	//std::cout << "\n";
+}
