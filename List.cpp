@@ -11,6 +11,16 @@ void util::List::ShowList()
 	std::cout << "\n";
 }
 
+void util::List::ReversoShowList()
+{
+	Node* cur = m_tail;
+	for (size_t i = 0; i < this->m_size; i++, cur = cur->prev)
+	{
+		std::cout << cur->val << "\t";
+	}
+	std::cout << "\n";
+}
+
 size_t util::List::Size()
 {
 	return this->m_size;
