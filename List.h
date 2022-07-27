@@ -19,5 +19,6 @@ namespace util
 	public:
 		void ShowList();
 		size_t Size();
+		void PushBack(int data);
 	};
 }

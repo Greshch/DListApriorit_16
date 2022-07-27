@@ -15,3 +15,22 @@ size_t util::List::Size()
 {
 	return this->m_size;
 }
+
+void util::List::PushBack(int data)
+{
+	Node* newNode = new Node;
+	newNode->val = data;
+	
+	if (m_size == 0)
+	{
+		m_head = m_tail = newNode;
+	}
+	else
+	{
+		m_tail->next = newNode;
+		newNode->prev = m_tail;
+		m_tail = newNode;
+	}
+
+	++this->m_size;
+}
