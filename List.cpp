@@ -44,3 +44,27 @@ void util::List::PushBack(int data)
 
 	++this->m_size;
 }
+
+int util::List::PopBack()
+{
+	if (m_size == 0) // empty!!
+	{
+		std::cerr << "Unexpected operation - pop... ERROR.. list is empty!!\n";
+		return -1;
+	}
+	
+	int res = m_tail->val;
+
+	Node* prevTail = m_tail->prev;
+	if (prevTail != nullptr) // size != 1
+	{
+		prevTail->next = nullptr;
+	}
+
+	delete m_tail;
+	m_tail = nullptr;
+	m_tail = prevTail;
+	--m_size;
+
+	return res;
+}

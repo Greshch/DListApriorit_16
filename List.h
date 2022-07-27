@@ -21,5 +21,6 @@ namespace util
 		void ReversoShowList();
 		size_t Size();
 		void PushBack(int data);
+		int PopBack();
 	};
 }
