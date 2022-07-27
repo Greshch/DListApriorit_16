@@ -10,3 +10,8 @@ void util::List::ShowList()
 	}
 	std::cout << "\n";
 }
+
+size_t util::List::Size()
+{
+	return this->m_size;
+}

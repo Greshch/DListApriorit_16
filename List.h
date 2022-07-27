@@ -18,5 +18,6 @@ namespace util
 
 	public:
 		void ShowList();
+		size_t Size();
 	};
 }
