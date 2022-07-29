@@ -23,5 +23,6 @@ namespace util
 		void PushBack(int data);
 		int PopBack();
 		void Clear();
+		~List();
 	};
 }

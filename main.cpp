@@ -25,6 +25,5 @@ int main()
 	std::cout << "\nlist_sise = " << list.Size() << "\n\n";
 
 	list.ShowList();
-	list.Clear();
 	return 0;
 }

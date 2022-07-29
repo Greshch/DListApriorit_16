@@ -92,3 +92,8 @@ void util::List::Clear()
 	m_size = 0;
 	//std::cout << "\n";
 }
+
+util::List::~List()
+{
+	Clear();
+}
