@@ -1,10 +1,22 @@
 #include "List.h"
 #include <iostream>
 
+util::List::List()
+{
+}
+
+util::List::List(size_t size, int val)
+{
+	for (size_t i = 0; i < size; i++)
+	{
+		PushBack(val);
+	}
+}
+
 void util::List::ShowList()
 {
 	Node* cur = m_head;
-	for (size_t i = 0; i < this->m_size; i++, cur = cur->next)
+	for (size_t i = 0; i < m_size; i++, cur = cur->next)
 	{
 		std::cout << cur->val << "\t";
 	}
@@ -14,7 +26,7 @@ void util::List::ShowList()
 void util::List::ReversoShowList()
 {
 	Node* cur = m_tail;
-	for (size_t i = 0; i < this->m_size; i++, cur = cur->prev)
+	for (size_t i = 0; i < m_size; i++, cur = cur->prev)
 	{
 		std::cout << cur->val << "\t";
 	}
@@ -23,7 +35,7 @@ void util::List::ReversoShowList()
 
 size_t util::List::Size()
 {
-	return this->m_size;
+	return m_size;
 }
 
 void util::List::PushBack(int data)
@@ -42,7 +54,7 @@ void util::List::PushBack(int data)
 		m_tail = newNode;
 	}
 
-	++this->m_size;
+	++m_size;
 }
 
 int util::List::PopBack()
