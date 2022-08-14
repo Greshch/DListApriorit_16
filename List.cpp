@@ -13,7 +13,17 @@ util::List::List(size_t size, int val)
 	}
 }
 
-void util::List::ShowList()
+util::List::List(List const& list)
+{
+	Node* cur = list.m_head;
+	for (size_t i = 0; i < list.m_size; i++, cur = cur->next)
+	{
+		int val = cur->val;
+		PushBack(val);
+	}
+}
+
+void util::List::ShowList() const
 {
 	Node* cur = m_head;
 	for (size_t i = 0; i < m_size; i++, cur = cur->next)
@@ -23,7 +33,7 @@ void util::List::ShowList()
 	std::cout << "\n";
 }
 
-void util::List::ReversoShowList()
+void util::List::ReversoShowList() const
 {
 	Node* cur = m_tail;
 	for (size_t i = 0; i < m_size; i++, cur = cur->prev)
@@ -33,7 +43,7 @@ void util::List::ReversoShowList()
 	std::cout << "\n";
 }
 
-size_t util::List::Size()
+size_t util::List::Size() const
 {
 	return m_size;
 }

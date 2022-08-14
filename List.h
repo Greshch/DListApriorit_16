@@ -19,9 +19,10 @@ namespace util
 	public:
 		List();
 		List(size_t size, int val);
-		void ShowList();
-		void ReversoShowList();
-		size_t Size();
+		List(List const& list);
+		void ShowList() const;
+		void ReversoShowList() const;
+		size_t Size() const;
 		void PushBack(int data);
 		int PopBack();
 		void Clear();
