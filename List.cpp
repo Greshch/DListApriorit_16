@@ -99,7 +99,6 @@ void util::List::Clear()
 	{
 		if (prev != nullptr)
 		{
-			//std::cout << prev->val << "# ";
 			delete prev;
 			prev = nullptr;
 		}
@@ -107,12 +106,10 @@ void util::List::Clear()
 	}
 	if (prev != nullptr)
 	{
-		//std::cout << prev->val << "# ";
 		delete prev;
 		prev = nullptr;
 	}
 	m_size = 0;
-	//std::cout << "\n";
 }
 
 util::List::~List()
